@@ -31,6 +31,25 @@ public class Timer : MonoBehaviour
             {
                 TimerOn = false;
                 TimeLeft = 0;
+
+                GameObject player = GameObject.FindGameObjectWithTag("Player");
+                Component[] components = player.GetComponents<Component>();
+                foreach (Component component in components)
+                {
+                    if (component.GetType() != typeof(SkinnedMeshRenderer)
+                        && component.GetType() != typeof(Transform)
+                        && component.GetType() != typeof(Animator)
+                       )
+                    {
+                        Destroy(component);
+                    }
+                }
+                foreach (Enemy enemy in GameObject.FindObjectsOfType<Enemy>())
+                {
+                    enemy.LostPlayer(gameObject);
+                }
+                GameObject.FindObjectsOfType<Enemy>();
+
                 victoryScreen.SetActive(true);
             }
         }

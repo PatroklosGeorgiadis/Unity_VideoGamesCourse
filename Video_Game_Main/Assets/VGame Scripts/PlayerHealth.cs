@@ -51,7 +51,7 @@ public class PlayerHealth : Health
         healthBar.value = currentHealth / totalHealth;
     }
 
-    protected override void Die()
+    public override void Die()
     {
         base.Die();
 

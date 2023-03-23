@@ -27,7 +27,7 @@ public class Health : MonoBehaviour
         }
     }
 
-    protected virtual void Die()
+    public virtual void Die()
     {
         alive = false;
         Debug.Log("Death: " + name);

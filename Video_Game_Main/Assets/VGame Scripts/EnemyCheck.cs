@@ -18,10 +18,15 @@ public class EnemyCheck : MonoBehaviour
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         numberOfEnemies = enemies.Length;
+
         if (numberOfEnemies > 10)
         {
-            Timer.SetActive(false);
-            gameOverScreen.SetActive(true);
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            PlayerHealth foundHealth = player.GetComponentInParent<PlayerHealth>();
+            if (foundHealth != null)
+            {
+                foundHealth.Die();
+            }
         }
     }
 }

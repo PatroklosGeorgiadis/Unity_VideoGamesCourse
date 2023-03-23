@@ -38,7 +38,7 @@ public class EnemyHealth : Health
         this.myParentSpawner = myParentSpawner;
     }
 
-    protected override void Die()
+    public override void Die()
     {
         base.Die();
 
