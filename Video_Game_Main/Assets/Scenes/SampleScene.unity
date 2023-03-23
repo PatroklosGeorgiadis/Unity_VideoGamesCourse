@@ -18121,7 +18121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   indicator: {fileID: 1681965868}
-  text: Hello young traveller.~You look pretty capable of handling a couple of monsters~Say,
+  text: Hello young traveller~You look pretty capable of handling a couple of monsters~Say,
     would you be so kind and help defend the village tonight?~Come talk to me again
     when you're ready
   imgbg: {fileID: 999102338}
