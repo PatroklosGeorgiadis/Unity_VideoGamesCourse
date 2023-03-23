@@ -6632,6 +6632,7 @@ GameObject:
   - component: {fileID: 692535290}
   - component: {fileID: 692535289}
   - component: {fileID: 692535288}
+  - component: {fileID: 692535293}
   m_Layer: 0
   m_Name: The Village
   m_TagString: Untagged
@@ -6647,8 +6648,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 692535286}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.743829, y: -31.955399, z: 63.409546}
-  m_LocalScale: {x: 100, y: 20, z: 100}
+  m_LocalPosition: {x: 10.2, y: -31.955399, z: 64}
+  m_LocalScale: {x: 75, y: 20, z: 60}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2064570696}
@@ -6751,6 +6752,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 692535286}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &692535293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692535286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a0a4ce9285524c41bb2c9c1bb601442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverScreen: {fileID: 902339763}
+  Timer: {fileID: 744356141}
+  numberOfEnemies: 0
 --- !u!1001 &699725916
 PrefabInstance:
   m_ObjectHideFlags: 0
