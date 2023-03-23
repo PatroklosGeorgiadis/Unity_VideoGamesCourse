@@ -12,6 +12,7 @@ public class PlayerHealth : Health
     [SerializeField] Slider healthBar;
     [SerializeField] GameObject gameOverScreen;
     [SerializeField] Animator animator;
+    [SerializeField] GameObject Timer;
 
     protected override void Start()
     {
@@ -76,6 +77,7 @@ public class PlayerHealth : Health
         }
         GameObject.FindObjectsOfType<Enemy>();
 
+        Timer.SetActive(false);
         gameOverScreen.SetActive(true);
     }
 }

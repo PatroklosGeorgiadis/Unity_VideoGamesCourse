@@ -15,10 +15,13 @@ public class NPCRequest : MonoBehaviour, IInteractable
     public string text;
     public RawImage imgbg;
     [SerializeField] public TextMeshProUGUI textMesh;
+
     [SerializeField] private bool readyForCombat;
     [SerializeField] private GameObject NPCs;
     [SerializeField] private GameObject Spawners;
     [SerializeField] private GameObject sunDirection;
+    [SerializeField] private GameObject getReadyScreen;
+    [SerializeField] private GameObject Timer;
 
     void Start()
     {
@@ -55,10 +58,10 @@ public class NPCRequest : MonoBehaviour, IInteractable
                                         //...with override method that gets a string as a parameter
                                         //interactor.ReceiveInteract(text);
 
-            NPCs.SetActive(false);
-            Spawners.SetActive(true);
             readyForCombat = false;
             sunDirection.transform.Rotate(194.0f, -30.0f, 0.0f, Space.Self);
+            getReadyScreen.SetActive(true);
+            StartCoroutine(getReady());
         }
     }	
 	
@@ -75,6 +78,15 @@ public class NPCRequest : MonoBehaviour, IInteractable
     public void OnReadyInteract()
     {
 		indicator.SetActive(true); //show
+    }
+
+    IEnumerator getReady()
+    {
+        yield return new WaitForSeconds(3);
+        Timer.SetActive(true);
+        Spawners.SetActive(true);
+        getReadyScreen.SetActive(false);
+        NPCs.SetActive(false);
     }
 
     IEnumerator passiveMe(int secs)
