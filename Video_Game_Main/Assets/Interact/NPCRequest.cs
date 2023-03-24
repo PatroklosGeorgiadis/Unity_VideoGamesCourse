@@ -22,6 +22,7 @@ public class NPCRequest : MonoBehaviour, IInteractable
     [SerializeField] private GameObject sunDirection;
     [SerializeField] private GameObject getReadyScreen;
     [SerializeField] private GameObject Timer;
+    [SerializeField] private TextMeshProUGUI Task;
 
     void Start()
     {
@@ -61,6 +62,7 @@ public class NPCRequest : MonoBehaviour, IInteractable
             readyForCombat = false;
             sunDirection.transform.Rotate(194.0f, -30.0f, 0.0f, Space.Self);
             getReadyScreen.SetActive(true);
+            Task.text = "Defend the village";
             StartCoroutine(getReady());
         }
     }	
