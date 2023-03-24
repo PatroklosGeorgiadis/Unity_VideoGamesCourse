@@ -36,11 +36,13 @@ public class PlayerHealth : Health
 
         healthBar.value = currentHealth / totalHealth;
 
-        animator.SetTrigger("Hit");
-
         if (currentHealth <= 0)
         {
             Die();
+        }
+        else
+        {
+            animator.SetTrigger("Hit");
         }
     }
 
