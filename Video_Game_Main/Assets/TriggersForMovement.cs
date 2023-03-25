@@ -18,7 +18,7 @@ public class TriggersForMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Cursor.visible = false;
     }
 
     private void OnTriggerEnter(Collider other)

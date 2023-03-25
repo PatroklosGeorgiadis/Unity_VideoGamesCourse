@@ -10,15 +10,20 @@ public class MainMenuManager : MonoBehaviour
     void Start()
     {
         blocker.SetActive(false);
+        Cursor.visible = true;
     }
 
     // Update is called once per frame
-    
+    void Update()
+    {
+        Cursor.visible = true;
+    }
 
     public void StartApp()
     {
         blocker.SetActive(true);
         SceneManager.LoadSceneAsync("SampleScene");
+        Cursor.visible = false;
         //blocker.SetActive(false);
     }
 

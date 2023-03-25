@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EscapeButton : MonoBehaviour
 {
@@ -15,7 +16,10 @@ public class EscapeButton : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Application.Quit();
+            //Application.Quit();
+            SceneManager.UnloadSceneAsync("SampleScene");
+            SceneManager.LoadSceneAsync("MainMenu");
+            //SceneManager.UnloadSceneAsync("SampleScene");
         }
     }
 }
