@@ -19,7 +19,7 @@ public class EnemyCheck : MonoBehaviour
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         numberOfEnemies = enemies.Length;
 
-        if (numberOfEnemies > 20)
+        if (numberOfEnemies > 10)
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             PlayerHealth foundHealth = player.GetComponentInParent<PlayerHealth>();

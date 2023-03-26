@@ -7,9 +7,9 @@ using UnityEngine.Events;
 public class Spawner : MonoBehaviour
 {
     public GameObject enemyPrefab;
-    public float enemiesToSpawn = 5;
-    public float activeEnemies = 0;
-    public float totalEnemiesSpawned;
+    public float enemiesToSpawn = 5; //πόσους θελουμε να γεννησουμε
+    public float activeEnemies = 0; //πόσοι είναι ζωντανοί τωρα
+    public float totalEnemiesSpawned; //ποσοι γεννηθηκαν συνολικά μεχρι στιγμής
     public float enemiesAtOnce = 2;
     public float originRandomOffset = 2;
     public UnityEvent onSpawnerEnd;
@@ -27,6 +27,8 @@ public class Spawner : MonoBehaviour
     {
         activeEnemies++;
         totalEnemiesSpawned++;
+        //activeEnemies = activeEnemies + 2;
+        //totalEnemiesSpawned = totalEnemiesSpawned + 2;
 
         GameObject clone = GameObject.Instantiate(enemyPrefab, transform.position + RandomSpawnLocalPosition(), transform.rotation);
 

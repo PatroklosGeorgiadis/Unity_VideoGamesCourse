@@ -4462,10 +4462,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6594257237092775435, guid: 46a04aabc0d7f6f43b96d8d778e78f9c,
     type: 3}
-  enemiesToSpawn: 2
+  enemiesToSpawn: 20
   activeEnemies: 0
   totalEnemiesSpawned: 0
-  enemiesAtOnce: 4
+  enemiesAtOnce: 1
   originRandomOffset: 2
   onSpawnerEnd:
     m_PersistentCalls:
@@ -5810,7 +5810,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6594257237092775435, guid: 46a04aabc0d7f6f43b96d8d778e78f9c,
     type: 3}
-  enemiesToSpawn: 2
+  enemiesToSpawn: 20
   activeEnemies: 0
   totalEnemiesSpawned: 0
   enemiesAtOnce: 2
@@ -5971,10 +5971,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6594257237092775435, guid: 46a04aabc0d7f6f43b96d8d778e78f9c,
     type: 3}
-  enemiesToSpawn: 2
+  enemiesToSpawn: 20
   activeEnemies: 0
   totalEnemiesSpawned: 0
-  enemiesAtOnce: 4
+  enemiesAtOnce: 2
   originRandomOffset: 2
   onSpawnerEnd:
     m_PersistentCalls:
@@ -10400,10 +10400,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6594257237092775435, guid: 46a04aabc0d7f6f43b96d8d778e78f9c,
     type: 3}
-  enemiesToSpawn: 2
+  enemiesToSpawn: 20
   activeEnemies: 0
   totalEnemiesSpawned: 0
-  enemiesAtOnce: 4
+  enemiesAtOnce: 3
   originRandomOffset: 2
   onSpawnerEnd:
     m_PersistentCalls:
@@ -12111,10 +12111,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6594257237092775435, guid: 46a04aabc0d7f6f43b96d8d778e78f9c,
     type: 3}
-  enemiesToSpawn: 2
+  enemiesToSpawn: 20
   activeEnemies: 0
   totalEnemiesSpawned: 0
-  enemiesAtOnce: 4
+  enemiesAtOnce: 1
   originRandomOffset: 2
   onSpawnerEnd:
     m_PersistentCalls:
@@ -12573,7 +12573,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6594257237092775435, guid: 46a04aabc0d7f6f43b96d8d778e78f9c,
     type: 3}
-  enemiesToSpawn: 2
+  enemiesToSpawn: 20
   activeEnemies: 0
   totalEnemiesSpawned: 0
   enemiesAtOnce: 2
