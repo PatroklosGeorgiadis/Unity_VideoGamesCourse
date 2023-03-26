@@ -7,6 +7,7 @@ public class EnemyCheck : MonoBehaviour
     [SerializeField] GameObject gameOverScreen;
     [SerializeField] GameObject Timer;
     [SerializeField] private int numberOfEnemies;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -16,10 +17,11 @@ public class EnemyCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        numberOfEnemies = enemies.Length;
-
-        if (numberOfEnemies > 10)
+       // GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+       // numberOfEnemies = enemies.Length;
+       
+        
+        if (numberOfEnemies >= 100)
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             PlayerHealth foundHealth = player.GetComponentInParent<PlayerHealth>();
@@ -29,4 +31,30 @@ public class EnemyCheck : MonoBehaviour
             }
         }
     }
+
+    public void OnTriggerEnter(Collider entered)
+    {
+        if (entered.CompareTag("Enemy"))
+        {
+            numberOfEnemies += 1;
+        }
+    }
+
+    public void OnTriggerExit(Collider entered)
+    {
+        if (entered.CompareTag("Enemy"))
+        {
+            numberOfEnemies -= 1;
+        }
+    }
+
+    public void Died()
+    {
+        
+        
+            numberOfEnemies -= 1;
+        
+    }
+
+   
 }
